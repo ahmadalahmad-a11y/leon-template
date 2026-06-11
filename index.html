@@ -1,12 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Leon template — responsive HTML/CSS template"
+    />
+    <meta name="theme-color" content="#19c8fa" />
+    <!-- font awesome -->
+    <!-- reset/normalize -->
+    <link rel="stylesheet" href="css/normalize.css" />
     <!-- font awesome -->
     <link rel="stylesheet" href="css/all.min.css" />
-    <!-- render all elements normaly -->
-    <link rel="stylesheet" href="css/normalize.css" />
     <!-- main css -->
     <link rel="stylesheet" href="css/template-two.css" />
     <!-- google fonts -->
@@ -19,15 +25,24 @@
     <title>kaspar | template two</title>
   </head>
   <body>
+    <a class="sr-only" href="#main-content">Skip to content</a>
     <!-- start header -->
     <header>
       <div class="container">
         <a href="#" class="logo">
           <img src="imgs/logo.webp" alt="logo" />
         </a>
-        <nav>
-          <i class="fas fa-bars toggle"></i>
-          <ul>
+        <nav aria-label="Primary navigation">
+          <button
+            class="toggle"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            type="button"
+          >
+            <span class="sr-only">Open menu</span>
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
+          <ul id="main-nav">
             <li><a class="active" href="#">Home</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Portfolio</a></li>
@@ -431,78 +446,89 @@
               <a href="#">Buy Now</a>
             </div>
           </div>
-
         </div>
-         <p class="contact-text">
-          Contact us if you have special request
-         </p>
-         <a href="#" class="contact-link">Contact us</a>
+        <p class="contact-text">Contact us if you have special request</p>
+        <a href="#" class="contact-link">Contact us</a>
       </div>
     </div>
     <!-- end pricing -->
-     <!-- start subscribe -->
-      <div class="subscribe">
-        <div class="container">
-          <form action="">
-            <i class="far fa-envelope fa-lg"></i>
-            <input type="email" name="mail" placeholder="your email" id="">
-            <input type="submit" value="subscribe">
-          </form>
+    <!-- start subscribe -->
+    <div class="subscribe">
+      <div class="container">
+        <form action="">
+          <i class="far fa-envelope fa-lg"></i>
+          <input type="email" name="mail" placeholder="your email" id="" />
+          <input type="submit" value="subscribe" />
+        </form>
+        <p>
+          accumasan id imperdiet et, porttitor at sem. Mauris blandit aliquet
+          elit, eget tincidunt.
+        </p>
+      </div>
+    </div>
+    <!-- end subscribe -->
+    <!-- start contact us -->
+    <div class="contact-us">
+      <div class="container">
+        <div class="main-heading">
+          <h2>contact us</h2>
           <p>
             accumasan id imperdiet et, porttitor at sem. Mauris blandit aliquet
-            elit, eget tincidunt.            
+            elit, eget tincidunt.
           </p>
         </div>
-      </div>
-     <!-- end subscribe -->
-      <!-- start contact us -->
-       <div class="contact-us">
-        <div class="container">
-          <div class="main-heading">
-            <h2>contact us</h2>
-            <p>
-              accumasan id imperdiet et, porttitor at sem. Mauris blandit aliquet
-              elit, eget tincidunt.
-            </p>
-          </div>
-          <div class="content">
-            <form action="">
-              <input class="main-input" type="text" placeholder="your name" name="name" id="">
-              <input class="main-input" type="email" placeholder="your email" name="email" id="">
-              <textarea 
-              name="measage" 
+        <div class="content">
+          <form action="">
+            <input
+              class="main-input"
+              type="text"
+              placeholder="your name"
+              name="name"
+              id=""
+            />
+            <input
+              class="main-input"
+              type="email"
+              placeholder="your email"
+              name="email"
+              id=""
+            />
+            <textarea
+              name="measage"
               rows="10"
-              placeholder="your measage" 
-              id="" 
-              class="main-input">
+              placeholder="your measage"
+              id=""
+              class="main-input"
+            >
             </textarea>
-            <input type="submit" value="send message">
-            </form>
-            <div class="info">
-              <h4>Get in touch</h4>
-              <span class="phone">+00 123.456.789</span>
-              <span class="phone">+00 123.456.789</span>
-              <h4>where we are</h4>
-              <address>
-                awesome address 17 <br>New York, NYC <br>123-4567-890 <br>USA
-              </address>
-            </div>
+            <input type="submit" value="send message" />
+          </form>
+          <div class="info">
+            <h4>Get in touch</h4>
+            <span class="phone">+00 123.456.789</span>
+            <span class="phone">+00 123.456.789</span>
+            <h4>where we are</h4>
+            <address>
+              awesome address 17 <br />New York, NYC <br />123-4567-890
+              <br />USA
+            </address>
           </div>
         </div>
-       </div>
-      <!-- end contact us -->
-       <!-- start footer -->
-        <footer>
-          <img src="imgs/logo.png" alt="">
-          <p>we are social</p>
-          <div class="social-icons">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fas fa-home"></i>
-            <i class="fab fa-linkedin"></i>
-          </div>
-          <p>&copy; 2021 <span>kasper</span> all right reserved</p>
-        </footer>
-       <!-- end footer -->
+      </div>
+    </div>
+    <!-- end contact us -->
+    <!-- start footer -->
+    <footer>
+      <img src="imgs/logo.png" alt="" />
+      <p>we are social</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-home"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+      <p>&copy; 2021 <span>kasper</span> all right reserved</p>
+    </footer>
+    <!-- end footer -->
   </body>
 </html>
